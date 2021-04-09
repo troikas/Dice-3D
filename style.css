@@ -95,6 +95,7 @@ header
     border: 2px solid #fff;
     border-radius: 1rem;
 
+    -webkit-backface-visibility: hidden;
     align-items: center;
     justify-content: center;
 }
@@ -111,7 +112,8 @@ header
 
     content: '';
 
-    background: #ccc;
+    border-radius: 1rem;
+    background: #0f2027;
 }
 
 .front
