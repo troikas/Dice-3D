@@ -95,25 +95,35 @@ header
     border: 2px solid #fff;
     border-radius: 1rem;
 
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     align-items: center;
     justify-content: center;
 }
 
-.face::before
+.face::after
 {
     position: absolute;
-    z-index: -1;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
 
     width: 100%;
     height: 100%;
 
     content: '';
+    -webkit-transform: rotateY( 180deg );
 
     border-radius: 1rem;
     background: #0f2027;
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 
 .front
@@ -245,5 +255,5 @@ footer a
 footer a:hover
 {
     color: #06b1bb;
-    text-shadow: none;
+    text-shadow: notop;
 }
